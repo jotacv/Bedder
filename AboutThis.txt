@@ -1,0 +1,16 @@
+# Creado by jotacv
+# jotacv@hotmail.es
+
+
+Protocolo:
+1.- Handshake:
+	i.- El cliente manda MsgHello con su versión, un string identificando las features y nombre de dispositivo.
+	ii.- El Servidor comprueba versión y features.
+	iii.- El Servidor contesta con un MsgHello en caso de ser aceptado con su version, las features aceptadas y su identificador.
+	iii.- Se manda un MsgBye en caso contrario.
+
+2.- Accion:
+	i.- Mensajes entre cliente y servidor. Nada nuevo bajo el sol.
+
+3.- Cierre:
+	i.- El Cliente manda un MsgBye.
