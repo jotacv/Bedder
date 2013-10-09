@@ -15,6 +15,7 @@ public class Network extends Activity{
 	
 	private static Socket skDevice = null;
 	private static ObjectOutputStream oos;
+	private static ObjectInpusStream ois;
 	
 
 	public static void setIpPort(String s_ip, String s_port){
@@ -66,11 +67,16 @@ public class Network extends Activity{
     			skDevice = new Socket(ip,port);
     			skDevice.setTcpNoDelay(true);
     			sendMessage(new Message.Message_Hello());
-/////////////////////////////////////////////////////////////////////////////
-/////////////// FILL MESSAGE ANSWER FROM SERVER /////////////////////////////
-/////////////////////////////////////////////////////////////////////////////  			
+				Object aux = ReceiveMessage();
+				switch (aux instanceof){
+					case Message.Message_Hello:
+						Message.Message_Hello msg = (Message.Message_Hello) aux;
+						//////// SET IN PREFERENCES FEATURES ACCEPTED ////////
+						return true;
+					case Message.Message_Bye: return false;						
+					else: return false;				
+				}		
     		}
-    		return true;
     	} catch (Exception e){
     		return false;
     	}

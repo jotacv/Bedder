@@ -1,7 +1,7 @@
 # Creado by jotacv
 # jotacv@hotmail.es
 
-
+###########################################################
 Protocolo:
 1.- Handshake:
 	i.- El cliente manda MsgHello con su versión, un string identificando las features y nombre de dispositivo.
@@ -14,3 +14,7 @@ Protocolo:
 
 3.- Cierre:
 	i.- El Cliente manda un MsgBye.
+############################################################
+
+El GUI del cliente no se debe quedar bloqueado en el init mientra se espera la contestacion del servidor!!!
+task para el procedimiento de entrada.
