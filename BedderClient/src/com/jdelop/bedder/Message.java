@@ -12,6 +12,7 @@ public class Message{
 		
 		public Message_Hello(){
 			this.version = " 0.2-beta";
+			this.uses="Mouse&Volume"
 			this.name = "Android-Device";
 		}
 	}
@@ -69,7 +70,7 @@ public class Message{
 		}
 	}
 	
-	static class Message_Action implements Serializable {	// Server info
+	static class Message_Info implements Serializable {	// Server info
 		private static final long serialVersionUID = 844686704323463810L;
 		public String text;
 		
