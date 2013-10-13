@@ -42,6 +42,16 @@ public class MainActivity extends Activity implements OnGestureListener {
         gdetector = new GestureDetector(this,this,null, false);
                 
         Context context = getApplicationContext();
+/* PSEUDO:
+
+SETUP()
+SET LAYOUT WITH CONNECT BUTTON
+WHEN CLICKED CHANGUE BUTTON SOMEHOW TO CLICKED LOOK
+WITH INTENT SOMEHOW CALL "CONNECT_TO_SERVER"
+RETURN ASYNCHRONUSLY
+AT RETURN OF CONNECT_TO_SERVER STAY IN LAYOUT OOR CHANGE LAYOUT TO CONNECTED_LAYOUT
+
+*/
         
 		int duration = Toast.LENGTH_SHORT;
 		Network.setIpPort(getString(R.string.ip),getString(R.string.port));
@@ -135,7 +145,7 @@ public class MainActivity extends Activity implements OnGestureListener {
 		return true;
 	}
 	
-	@Override	//VIP..!! without this gdetector wont fire
+	@Override	//VIP..!! without this, gdetector wont fire
 	public boolean onTouchEvent(MotionEvent me) {
 		return gdetector.onTouchEvent(me);
 
