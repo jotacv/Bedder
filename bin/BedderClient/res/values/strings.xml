@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Bedder</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="out">Debug output</string>
+    <string name="ip">192.168.1.105</string>
+    <string name="port">1337</string>
+    <string name="Refresh">Refresh</string>
+
+</resources>
